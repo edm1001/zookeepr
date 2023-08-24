@@ -1,8 +1,9 @@
-import express from 'express';
-import animals  from './data/animals.json' assert { type: "json" };
-// const express = require('express');
-// const animals = require('./data/animals.json');
+const express = require('express');
+const{ animals} = require('./data/animals.json');
+// import express from 'express';
+// import animals  from './data/animals.json' assert { type: "json" };
 
+const PORT = process.env.PORT || 3001;
 const app = express();
 
 function filterByQuery(query, animalsArray) {
@@ -55,6 +56,6 @@ function filterByQuery(query, animalsArray) {
       }
     });
 
-app.listen(3001, () => {
+app.listen(PORT, () => {
     console.log('API server now on port 3001')
 })
