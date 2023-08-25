@@ -3,6 +3,7 @@ const{ animals} = require('./data/animals.json');
 const fs = require('fs');
 const path = require('path');
 
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 
@@ -10,6 +11,7 @@ const app = express();
 // parse incoming data
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
+app.use(express.static('public'));
 
 
 function filterByQuery(query, animalsArray) {
@@ -105,7 +107,25 @@ function filterByQuery(query, animalsArray) {
       res.json(animal); 
     }
   });
-  
+
+// home page
+  app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+  });
+// animals page
+  app.get('/animals', (req, res)=> {
+    res.sendFile(path.join(__dirname, './public/animals.html'));
+  });
+
+// caretakerpage
+  app.get('/zookeepers', (req, res)=> {
+    res.sendFile(path.join(__dirname, './public/zookeepers.html'));
+  });
+
+  app.get('*', (req,res) => {
+    res.send(path.join(__dirname, './public/index.html'));
+  });
+
 
 app.listen(PORT, () => {
     console.log('API server now on port 3001');
