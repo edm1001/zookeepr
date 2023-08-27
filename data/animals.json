@@ -99,6 +99,16 @@
       "personalityTraits": [
         "hungry"
       ]
+    },
+    {
+      "name": "gorilla",
+      "species": "mammal",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "zany",
+        "loving"
+      ],
+      "id": "10"
     }
   ]
 }
