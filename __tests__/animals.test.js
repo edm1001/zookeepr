@@ -57,26 +57,25 @@ test("finds by Id", () => {
     expect(result.name).toBe("Erica")
 });
 
-test("validates personality traits", () => {
+test('validates personality traits', () => {
     const animal = {
-      id: "3",
-      name: "Erica",
-      species: "gorilla",
-      diet: "omnivore",
-      personalityTraits: ["quirky", "rash"],
+      id: '3',
+      name: 'Erica',
+      species: 'gorilla',
+      diet: 'omnivore',
+      personalityTraits: ['quirky', 'rash']
     };
   
     const invalidAnimal = {
-      id: "3",
-      name: "Erica",
-      species: "gorilla",
-      diet: "omnivore",
+      id: '3',
+      name: 'Erica',
+      species: 'gorilla',
+      diet: 'omnivore'
     };
   
     const result = validateAnimal(animal);
     const result2 = validateAnimal(invalidAnimal);
   
     expect(result).toBe(true);
-    expect(result2).toBe(false);
-  });
-
+    expect(result2).toBe(false)
+});
