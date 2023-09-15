@@ -13,7 +13,11 @@ Features
 -This application allows users to see a list of zookeepers and zoo animals
 -When user navigates to View animals button it will lead animals page
 -Then user will see animals with their name personality traits and diet listed.
--When user clicks View Zookeepers 
+-When user clicks View Zookeepers, it will list them with their age and favorite animal
+-When clicks adds to the catalog, user will have an option to add a zookeeper or animal
+-when user signs up for animal, it will ask for the name, species, choice of diet, and personality traits.
+-When user signs up for animal, it wll ask for the name, age, and favorite animal.
+-When user finishes the sign up, user will see the new data in the catalog.
 
 
 ## License
