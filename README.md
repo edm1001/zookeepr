@@ -37,5 +37,5 @@ This app allows users to see the people and animals in the zoo.
 ---
 ## Question
 Contact me through either:
-[GitHub](https://github.com/edm1001)
-[Email: edmerfranciz@gmail.com](mailto:edmerfranciz@gmail.com)
+- [GitHub](https://github.com/edm1001)
+- [Email: edmerfranciz@gmail.com](mailto:edmerfranciz@gmail.com)
